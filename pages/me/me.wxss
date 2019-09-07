@@ -1,0 +1,59 @@
+@import "../search/search"; 
+
+.sign{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    background-color: #DC4238
+}
+.hidden_btn{
+    display: none;
+}
+.background_img{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width:300%;
+    height:80%;    
+    filter: blur(35px);
+    z-index: -1;
+    transform: scale(1.5); /*和网易云音乐对比了一下，发现他们是也是放大1.5倍*/
+  }
+.image_box{
+    position:absolute;
+    left:50%;
+    width:19%;
+    height:71px;    
+    top:12%;
+    transform:translate(-50%,-50%); 
+}
+.image{
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+}
+.nickName_box{
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 50px;
+    top: 24%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.nickName{
+    color: #ffffff;
+    font-size: 14px;
+}
+.head{
+    height: 32%;
+}
+.hot_keys_box_item{
+  color: #000000;
+}
+.title{
+  color: #000000;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "yueku": "/component/yueku/yueku",
+    "playing": "/component/playing/playing",
+    "me": "/component/me/me"
+  }
+}

@@ -1,0 +1,36 @@
+<!--pages/search/search.wxml-->
+<view class="cu-bar search bg-white">
+    <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"
+            bindfocus="focusInput" bindinput="inputSearch"></input>
+             <!-- bindblur="blurInput" -->
+    </view>
+    <view class="action">
+        <button class="cu-btn bg-green shadow-blur round">取消</button>
+    </view>
+</view>
+<view class="" wx:if="{{keyInput==false}}">
+    <view class="hot_search">
+        <text class="hot_search_title title_txt">热门搜索</text>
+        <view class="hot_search_box">
+            <view class="hot_search_txt" wx:for="{{hots}}" wx:key="index"
+                bind:tap="searchHot" data-data="{{item.first}}">{{item.first}}</view>
+        </view>
+    </view>
+    <view class="search_histroy">
+        <text class="title_txt">搜索历史</text>
+        <view class="search_histroy_box">
+            <!-- <view class="" wx:for="{{}}" wx:key="index">{{item}}</view> -->
+        </view>
+    </view>
+</view>
+<view class="" wx:elif="{{keyInput==true}}">
+    <view class="">
+        <view wx:for="{{searchSuggest}}" wx:key="index" bind:tap="searchResult"
+            data-data="{{item.keyword}}">{{item.keyword}}</view>
+    </view>
+</view>
+<view class="" wx:elif="{{}}">
+
+</view>

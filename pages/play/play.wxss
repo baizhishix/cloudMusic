@@ -1,0 +1,200 @@
+/* pages/play/play.wxss */
+/* play.wxss */
+page, .body {
+    height: 100%;
+  }
+  /* 播放界面毛玻璃效果 */
+  .background_img{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(20px);
+    z-index: -1;
+    transform: scale(1.5); /*和网易云音乐对比了一下，发现他们是也是放大1.5倍*/
+  }
+  /* .sing-brief {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #ffffff;
+  }
+  .sing-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .singer-name {
+    font-size: 12px;
+  } */
+  /* .back{
+    width: 100%;
+    /* height: 105%; */
+  /* }  */
+  .back_box{
+    position:absolute;
+    width:8%;
+    height:24px;
+    padding-top:10rpx;
+  }
+  .sing-brief {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .sing-name {
+    font-size: 18px;
+    color: #ffffff;
+    width:92%;
+    right:0;
+    display:initial;
+  }
+  .singer-name{
+    display:flex;
+    font-size:13px;
+    color:#ffffff;
+    text-align:center;
+    line-height:12px;
+    justify-content:center;
+  }
+  .singer-name-text{
+    padding-left: 5rpx;
+    padding-right: 5rpx;
+  }
+  .sing-show {
+    position: relative;
+    width: 100%;
+    height: 76%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .coverImgStick {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 100rpx;
+    height: 130rpx;
+    transform: translate(-20%, -50%) rotate(-20deg);
+  }
+  .coverImgBg {
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500rpx;
+    height: 500rpx;
+    border-radius: 50%;
+    
+  }
+  .coverImg {
+    width: 400rpx;
+    height: 400rpx;
+    border-radius: 50%;
+    top:28%;
+    left: 23%;
+    position: absolute;
+    border: 3px solid #ffffff;
+    animation: rotate 15s linear infinite ;
+    animation-play-state: paused;
+  }
+  .play_suspend{
+    display: flex;
+    height:15%;
+    text-align:center;
+    line-height:50px;
+    box-sizing: border-box;
+  }
+  .icon_playing{
+    flex: 1;
+  }
+  .icon_play{
+    width:24%;
+    height:33%;
+  }
+  .img_play_suspend{
+    width: 28%;
+    height: 40%;
+  }
+  .coverImg.play {
+    animation: rotate 15s linear infinite ;
+    animation-fill-mode: forwards;
+  }
+  .moveCircle.play {
+    animation: moveCircle 2.5s linear infinite ;
+    animation-fill-mode: forwards;
+  }
+  .hide{
+    display: none;
+  }
+  @keyframes rotate {
+    0%{
+      transform: rotate(0);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .songLyric{
+    color: #ffffff;
+    font-size: 14px;
+  }
+  /* .circle{
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    width:400rpx;
+    height:400rpx;
+    /* position:absolute; */
+    /* animation: moveCircle 2.5s linear infinite ; */
+    /* animation-play-state: paused; */
+  /* } */ 
+  .moveCircle{
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    width:400rpx;
+    height:400rpx;
+    animation: moveCircle 2.5s linear infinite ;
+    animation-play-state: paused;
+  }
+  /* .circle{
+    border-radius: 50%;
+    border: 1px solid red;
+    animation: moveCircle 5s  2s linear infinite ;/* 因为动画宽高会变化，所以会覆盖*/
+    /* animation-play-state: paused; */
+  /* } */ 
+  @keyframes moveCircle {
+    0%{
+      width: 400rpx;
+      height: 400rpx;
+      border: 1px solid rgba(255, 255, 255, 1)
+    }
+    30%{
+      width: 510rpx;
+      height: 510rpx;
+      border: 1px solid rgba(255, 255, 255, 0.8)
+    }
+    50%{
+      width: 610rpx;
+      height: 610rpx;
+      border: 1px solid rgba(255, 255, 255, 0.6)
+    }
+    80%{
+      width: 700rpx;
+      height: 700rpx;
+      border: 1px solid rgba(255, 255, 255, 0.4)
+    }
+    99%{
+      width: 375px;
+      height: 375px;
+      border: 1px solid rgba(255, 255, 255, 0.1)
+    }
+    100%{
+      width: 0px;
+      height: 0px;
+      border: 1px solid rgba(255, 255, 255, 0)
+    }
+  }
+  /* 741rpx */

@@ -1,0 +1,11 @@
+/* pages/index/index.wxss */
+.iconfont{
+    width: 100%;
+    height: 56rpx;
+    display: block;
+    text-align: center;
+    line-height: 56rpx;
+}
+page{
+    background: white;
+}

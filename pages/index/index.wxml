@@ -1,0 +1,27 @@
+<!--pages/index/index.wxml-->
+<yueku wx:if="{{PageCur=='yueku'}}"></yueku>
+<playing wx:if="{{PageCur=='playing'}}"></playing>
+<me wx:if="{{PageCur=='me'}}"></me>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="yueku">
+    <view class='cuIcon-cu-image'>
+      <!-- <image src="/images/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image> -->
+      <i class="iconfont icon-yueku {{PageCur=='yueku'?'text-green':'text-gray'}}"></i>
+    </view>
+    <view class="{{PageCur=='yueku'?'text-green':'text-gray'}}">乐库</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="playing">
+    <view class='cuIcon-cu-image'>
+      <!-- <image src="/images/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image> -->
+      <i class="iconfont icon-bofang {{PageCur=='playing'?'text-green':'text-gray'}}"></i>
+    </view>
+    <view></view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="me">
+    <view class='cuIcon-cu-image'>
+      <!-- <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image> -->
+      <i class="iconfont icon-wode {{PageCur=='wode'?'text-green':'text-gray'}}"></i>
+    </view>
+    <view class="{{PageCur=='me'?'text-green':'text-gray'}}">我的</view>
+  </view>
+</view>

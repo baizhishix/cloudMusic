@@ -1,0 +1,13 @@
+/* pages/me/me.wxss */
+
+.pay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 400rpx;
+    height: 150rpx;
+    line-height: 150rpx;
+}

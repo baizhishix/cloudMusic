@@ -1,0 +1,26 @@
+/* pages/search/search.wxss */
+
+.hot_search{
+    width: 100%;
+    background: white;
+    
+}
+
+.title_txt{
+    padding: 38rpx 40rpx 0;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.hot_search_box{
+    padding: 20rpx 50rpx 0;
+}
+
+.hot_search_txt{
+    display: inline-block;
+    margin-right: 20rpx;
+    margin-bottom: 16rpx;
+    background: #ccc;
+    border-radius: 10rpx;
+    padding: 20rpx 10rpx;
+}

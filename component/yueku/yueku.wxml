@@ -1,0 +1,98 @@
+<!--pages/yueku/yueku.wxml-->
+<view class="cu-bar search bg-white">
+    <view class="search-form round" bindtap="gotoSearch">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+    </view>
+    <view class="action">
+        <button class="cu-btn bg-green shadow-blur round">搜索</button>
+    </view>
+</view>
+
+<view ></view>
+
+<view class="">
+    <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+        <swiper-item wx:for="{{banners}}" wx:key class="{{cardCur==index?'cur':''}}">
+            <view class="swiper-item">
+                <image src="{{item.picUrl}}" mode="aspectFill"></image>
+                <!-- <video src="{{item.picUrl}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video> -->
+            </view>
+        </swiper-item>
+    </swiper>
+
+    <view class="class_list">
+        <view class="class_list_item">
+            <view class=""></view>
+            <text class="">推荐MV</text>
+        </view>
+        <view class="class_list_item">
+            <view class=""></view>
+            <text class="">歌手榜</text>
+        </view>
+        <view class="class_list_item">
+            <view class=""></view>
+            <text class="">歌单</text>
+        </view>
+        <view class="class_list_item">
+            <view class=""></view>
+            <text class="">榜单排行</text>
+        </view>
+    </view>
+
+    <view class="new_song recommend_mv">
+        <text class="recommend_mv_title">最新音乐</text>
+        <view class="recommend_mv_item new_song_item">
+            <view class="new_song_list" wx:for="{{songNewList}}" wx:key="item.id" bind:tap="musicPlay" data-id="{{item.id}}">
+                <image class="new_song_image" src="{{item.song.album.picUrl}}" />
+                <text class="new_song_songName">{{item.name}}</text>
+                <text class="new_song_name">{{item.song.album.artists[0].name}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="new_song recommend_mv">
+        <text class="recommend_mv_title">精选歌单</text>
+        <view class="recommend_mv_item new_song_item">
+            <view class="new_song_list" wx:for="{{playLists}}" wx:key="item.id">
+                <image class="new_song_image" src="{{item.coverImgUrl}}" />
+                <text class="new_song_songName">{{item.name}}</text>
+                <!-- <text class="new_song_name">{{item.song.album.artists[0].name}}</text> -->
+            </view>
+        </view>
+    </view>
+
+    <view class="recommend_mv">
+        <text class="recommend_mv_title">推荐MV</text>
+        <view class="recommend_mv_item">
+            <view class="recommend_mv_list" wx:for="{{mvList}}" wx:key="item.id">
+                <image class="recommend_mv_image" src="{{item.picUrl}}" />
+                <text class="recommend_mv_txt">{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="new_song recommend_mv">
+        <text class="recommend_mv_title">精选电台</text>
+        <view class="recommend_mv_item new_song_item">
+            <view class="new_song_list" wx:for="{{radioList}}" wx:key="item.id">
+                <image class="new_song_image" src="{{item.picUrl}}" />
+                <text class="new_song_songName">{{item.name}}</text>
+                <!-- <text class="new_song_name">{{item.song.album.artists[0].name}}</text> -->
+            </view>
+        </view>
+    </view>
+
+    <view class="new_song recommend_mv">
+        <text class="recommend_mv_title">最新专辑</text>
+        <view class="recommend_mv_item new_song_item">
+            <view class="new_song_list" wx:for="{{albums}}" wx:key="item.id">
+                <image class="new_song_image" src="{{item.blurPicUrl}}" />
+                <text class="new_song_songName">{{item.name}}</text>
+                <text class="new_song_name">{{item.artists[0].name}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class=""></view>

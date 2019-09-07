@@ -1,0 +1,4 @@
+<!--pages/me/me.wxml-->
+<view class="">
+    <button class="pay" bind:tap="login">登录</button>
+</view>
